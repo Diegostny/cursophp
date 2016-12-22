@@ -2,7 +2,7 @@ function iniciarSuporte() {
     setTimeout(getChamado, 2000);
 }
 
-function getChamado() {
+function getChamado() { 
     $.ajax({
         //url:'chat/ajax/getchamado',
         url: 'ajax/getchamado',
@@ -32,21 +32,25 @@ function resetChamados() {
 
 function atenderChamado(obj) {
     var id = $(obj).closest('.chamado').attr('data-id');
-
     window.open("chat/chat?id=" + id, "chatWindow", "width=600,height=480");
 }
 
 function abrirChat() {
-    window.open("chat/chat", "chatWindow", "width=600,height=480");
+    window.open("chat/", "chatWindow", "width=600,height=480");
 }
 
 function enviarMsgChat(obj, event) {
     if (event.keyCode === 13 && obj.value !== "") {
         var msg = obj.value;
         var hora = getMsgTime();
-        var nome = "Fulano";
+        var nome = $('.inputarea').attr('data-nome');
         obj.value = '';
         $('.chatarea').append("<div class='msgitem'>[" + hora + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+        $.ajax({
+            url: 'ajax/enviarMsgToDb',
+            type: 'POST',
+            Data:{msg:msg, hora:hora}
+        });        
     }
 }
 
@@ -56,15 +60,13 @@ function getMsgTime() {
     str_h = new String(d.getHours());
     str_m = new String(d.getMinutes());
     str_s = new String(d.getSeconds());
-
     //se tiver menos que 2 digitos, acrescenta um 0
     if (str_h.length < 2)
         str_h = 0 + str_h;
     if (str_m.length < 2)
         str_m = 0 + str_m;
     if (str_s.length < 2)
-        str_s = 0 + str_s;
-    
+        str_s = 0 + str_s;    
     return (str_h + ':' + str_m + ':' + str_s);
 }
 

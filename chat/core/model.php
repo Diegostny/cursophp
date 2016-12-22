@@ -10,7 +10,7 @@ class Model {
                                 $config['dbuser'],$config['dbpass']);
         } catch (PDOException $ex) {
             echo 'Erro: '.$ex->getMessage();
-        }        
+        }
     }
     
 }

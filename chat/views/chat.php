@@ -1,5 +1,6 @@
 <div class="chatarea"></div>
 
-<div class="inputarea" data-nome="">
-    <input id="msg" type="text" onkeyup="enviarMsgChat(this, event)" placeholder="Digite sua mensagem"/>
+<div class="inputarea" data-nome="<?php echo $nome; ?>">
+    <input id="msg" type="text" onkeyup="enviarMsgChat(this, event)" 
+           placeholder="<?php echo $nome; ?>, digite sua mensagem"/>
 </div>
