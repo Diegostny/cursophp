@@ -2,7 +2,7 @@ function iniciarSuporte() {
     setTimeout(getChamado, 2000);
 }
 
-function getChamado() {
+function getChamado() { 
     $.ajax({
         //url:'chat/ajax/getchamado',
         url: 'ajax/getchamado',
@@ -32,41 +32,81 @@ function resetChamados() {
 
 function atenderChamado(obj) {
     var id = $(obj).closest('.chamado').attr('data-id');
-
     window.open("chat/chat?id=" + id, "chatWindow", "width=600,height=480");
 }
 
 function abrirChat() {
-    window.open("chat/chat", "chatWindow", "width=600,height=480");
+    window.open("chat/", "chatWindow", "width=600,height=480");
 }
 
 function enviarMsgChat(obj, event) {
     if (event.keyCode === 13 && obj.value !== "") {
         var msg = obj.value;
-        var hora = getMsgTime();
-        var nome = "Fulano";
+        var time = new Date();
+        var nome = $('.inputarea').attr('data-nome');
         obj.value = '';
-        $('.chatarea').append("<div class='msgitem'>[" + hora + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+        $('.chatarea').append("<div class='msgitem'>[" + getMsgTime(time) + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+        $.ajax({
+            url: '../ajax/enviarMsgToDb',
+            type: 'POST',
+            data:{'msg':msg, 'time':time}            
+        });        
     }
 }
 
-function getMsgTime() {
-    var d = new Date();
-    //converte as horas, minutos e segundos para string
+function getMsgTime(d) {
     str_h = new String(d.getHours());
     str_m = new String(d.getMinutes());
     str_s = new String(d.getSeconds());
-
-    //se tiver menos que 2 digitos, acrescenta um 0
+    // acrescenta um 0 se existir menos que 2 digitos
     if (str_h.length < 2)
         str_h = 0 + str_h;
     if (str_m.length < 2)
         str_m = 0 + str_m;
     if (str_s.length < 2)
-        str_s = 0 + str_s;
-    
-    return (str_h + ':' + str_m + ':' + str_s);
+        str_s = 0 + str_s;    
+    return (str_h+':'+str_m+':'+str_s);
 }
+
+function updateChat() {
+    $.ajax({
+       url:'../ajax/updateMessages',
+       type: 'GET',
+       dataType: 'json',
+       success:function(json) {
+           if (json.mensagens.length > 0) {
+               for(var i in json.mensagens) {
+                   var time = json.mensagens[i].data_envio;
+                   if (json.mensagens[i].origem === '0') {
+                       var nome = 'Suporte';
+                   } else {
+                       var nome = $('.inputarea').attr('data-nome');
+                   }                   
+                   var msg = json.mensagens[i].mensagem;
+                   $('.chatarea').append("<div class='msgitem'>[" + time + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+               }
+           }
+           setTimeout(updateChat, 1000);
+       },
+       error:function() {
+           setTimeout(updateChat, 1000);
+       }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
