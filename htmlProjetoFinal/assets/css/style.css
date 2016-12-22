@@ -1,0 +1,128 @@
+body{margin:0;font-family:Arial;font-size:12px;}
+.topo{height:30px;background-color:#333333;}
+.topoint{width:100%;max-width:1040px;height:30px;margin:auto;}
+.topoleft{width:50%;height:30px;float:left;}
+.toporight{width:50%;height:28px;float:right;margin-top:2px;}
+.topoleft ul {margin:0;padding:0;list-style:none;}
+.topoleft li{float:left;height:30px;line-height:30px;margin-left:8px;margin-right:8px; }
+.topoleft li a{text-decoration:none;color:#FFF;}
+.topoleft li .ativo{color:blue; }
+.topobusca{width:110px;height:20px;outline:0;}
+.toporight a{float:right;border:0; width:26px; height:26px;}
+.toporight input{float:right;}
+.toporight img {margin-right:4px;}
+.topo2{height:95px;}
+.topo2int{width:100%;max-width:1040px;height:95px;margin:auto;}
+.logo{border:0;width:230px;height:90px;float:left;margin-top:5px;}
+.topo2 .banner{width:650px;height:80px;float:right;margin-top:7px;background-color:#FF0000;}
+.menu{height:40px;background-color:#FF0000;}
+.menuint{width:100%;max-width:1040px;height:40px;margin:auto;}
+.menu ul{ margin:0;padding:0;list-style:none;}
+.menu li{ float:left;height:40px;line-height:40px;padding-left:8px;padding-right:8px;}
+.menu a{color:#fff;text-decoration:none;}
+.menu li .ativo{color:blue; }
+.submenu{width:150px;background-color:#FF0000;position:absolute;display:none;}
+.menu li:hover .submenu{display:block;}
+.submenuitem{width:140px;height:30px;line-height:30px;padding-left:10px;}
+.submenuitem:hover{background-color:#f20;}
+.ultimasnoticias{height:40px;}
+.ultimasnoticiasint{width:100%;max-width:1040px;margin:auto;height:40px;}
+.ultimasnoticiasarea{height:28px;background-color:#FFF;border:1px solid #CCC;margin-top:10px;}
+.ultnoticiastitulo{background-color:#FF0000;color:#FFF;height:28px;display:inline-block;line-height:28px;padding-left:10px;padding-right:10px;font-size:16px;}
+.ultnoticiasnoticia{color:#000;height:28px;line-height:28px;display:inline-block;padding-left:5px;}
+.containerint{width:100%;max-width:1040px;margin:auto;}
+.leftside{width:753px;float:left;}
+.rightside{width:275px;min-height:198px;float:right;margin-left:12px;}
+.widget{background-color:#fff;border:1px solid #CCC;margin-bottom:10px;}
+.widget-titulo{height:30px;line-height:30px;border-bottom: 1px solid #CCC;background-color:#DDD;padding-left:5px;font-size:14px;}
+.widget-conteudo{text-align:center;padding-top:5px;padding-bottom:5px;}
+.noticia-item{font-size:14px;padding:10px 0;margin:0px 10px;text-align:left;border-bottom:1px solid #CCC;}
+.noticia-item a { text-decoration:none;color:#000;}
+.slideshow{height:335px;background-color:#ccc;overflow:hidden;margin-bottom:20px;}
+.slideshowarea{height:335px;width:10000px;background-color:#DDD;transition:all 1s;}
+.slide{height:335px;float:left;background-repeat:no-repeat;background-position:center;background-size:cover;}
+.slideinfo{height:70px;background-image:url('../images/slideshow_bg.png');background-size:auto 60px;margin-top:275px;}
+.slideinfo_titulo{font-size:20px;color:#FFF;padding-top:15px;padding-left:20px;}
+.slideinfo_subtitulo{font-size:13px;color:#FFF;padding-left:20px;}
+.slidebolinhas{position:absolute;width:200px;height:20px;padding-top:5px;padding-left:5px;}
+.bolinhas{width:16px;height:16px;border-radius:8px;float:left;margin-right:5px;cursor:pointer;background-color:#ccc;}
+.noticiaarea1{width:430px;float:left;}
+.noticiaarea2{width:320px;float:left;}
+.noticia-item{font-size:14px;padding:10px 0;margin:0px 5px;text-align:left;border-bottom:1px solid #CCC;margin-top:-3px;}
+.noticiaimg{width:80px;height:80px;border:1px solid #ccc;padding:3px;float:left;}
+.noticiastitulo{width:230px;margin-left:6px;float:left;font-size:16px;color:#040406;}
+.noticiainfo{width:230px;font-size:12px;margin-left:6px;color:#999;float:left;}
+.noticiabig{margin-left:10px;}
+.noticiabig .noticiaimg{width:410px;height:222px;}
+.noticiabig .noticiaimg img{width:410px;height:222px; }
+.noticiabig .noticiastitulo{font-size:30px;width:410px;}
+.menumobile{display:none;}
+
+/* Responsividade da pagina para monitores pequenos
+* 890px é ideal para telas de 1024px
+*/
+@media only screen and (min-width:912px) and (max-width:1057px) {
+    .topoint, .topo2int, .menuint, .ultimasnoticiasint, .containerint{max-width:890px;}
+    .leftside{width:600px;}
+    .noticiaarea1{width:340px;}
+    .noticiaarea2{width:240px;}
+    .noticiabig .noticiaimg, .noticiabig .noticiaimg img{width:320px;}
+    .noticiabig .noticiastitulo{font-size: 25px;width: 320px;}
+    #menu{display: block !important;}
+}
+
+/* Tamanho para tablet
+* quanto menor for a tela vamos diminuindo informações na tela.
+* Retiramos a div class banner vermelho dentro de topo2 em telas menores.
+* Centralizamos nossa logomarca na pagina.
+* Retiramos tambem a div rightside lateral direita */
+@media only screen and (min-width:701px) and (max-width:911px) {    
+    .topoint, .topo2int, .menuint, .containerint{max-width:768px;}
+    .topo2 .banner, .rightside{display:none;} /* retirado do site para esta tela */
+    .leftside{float:none;width:700px;margin:auto;}
+    /* retiramos o float left e colocamos margin:auto para centralizar a div */
+    .logo{float:none;margin:auto;}    
+    .noticiaarea1{width:440px;}
+    .noticiaarea2{width:240px;}
+    .noticiabig .noticiaimg, .noticiabig .noticiaimg img{width:420px;}
+    .noticiabig .noticiastitulo{font-size: 25px;width: 420px;}
+    #menu{display: block !important;}
+}
+
+/* versao de tela para celular -- padrão 320px */
+@media only screen and (max-width:700px){
+    .topoint, .topo2int, .containerint{max-width:320px;}
+    .toporight{width:100%;}
+    .topo2 .banner, .topoleft, .ultimasnoticias, .rightside{display:none;}
+    .leftside{float:none;width:auto;margin-top:10px;}
+    .logo{float:none;margin:auto;}
+    .noticiaarea1{width:320px;height:auto}
+    .noticiaarea2{width:300px;margin:auto;float:none;clear:both;margin-top:10px;} /* padding-top:20px; */
+    .noticiastitulo{width:206px;}
+    .noticiainfo{width:206px;}
+    .noticia-item {clear:both;}
+    .noticiabig .noticiaimg, .noticiabig .noticiaimg img{width:290px;}
+    .noticiabig .noticiastitulo{font-size:25px;width:290px;}
+    /* menu mobile */
+    .menumobile{
+        display: block;
+    }
+    .menu ul{
+        display: none;
+        position:absolute;
+        background-color: red;
+        z-index: 10;
+    }
+    .menu li{
+        float: none;
+        height: auto;
+    }
+    .menu li img{
+        display: none;
+    }
+    .menuint .submenu{
+        position: static;
+        display: block;
+    }
+
+}

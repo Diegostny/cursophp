@@ -1,0 +1,26 @@
+/* 
+    Created on : 11/12/2016, 09:08:52
+    Author     : Diego Sebastiany
+*/
+
+body {
+    background: gray;
+    color: yellow;
+    margin: 2%;
+}
+
+header {
+    background: darkgreen;
+    color: whitesmoke;
+    height: auto;
+    margin-top: 5%;
+    text-align: center;    
+}
+
+footer {
+    background: darkgreen;
+    color: whitesmoke;
+    height: auto;
+    margin-bottom: 5%;
+    text-align: center;
+}

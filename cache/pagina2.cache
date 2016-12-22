@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Teste de Cache - Página2</title>
+</head>
+<body>
+    <div style="width:auto;margim:auto;background:blue;padding:10px;">
+        <h2>Cabeçalho 636</h2>
+
+        <form method="POST">
+            <input type="text" placeholder="E-mail"/>
+            <br/><br/>
+            <input type="password" placeholder="Senha"/>
+            <br/><br/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </div>
+</body>
+</html>

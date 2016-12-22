@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina de Teste</title>
+        <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body onload="aoIniciar()">
+        <div class="topo">
+            <div class="topoint">
+                <div class="topoleft">
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="quem-somos">QuemSomos</a></li>
+                        <li><a href="anuncieaqui">AnuncieAqui</a></li>
+                        <li><a href="contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="toporight">
+                    <input type="image" src="assets/images/lupa.png" border="0" width="26" height="26"/>
+                    <input type="text" name="busca"   class="topobusca" placeholder="busca..."/>
+                    <a href=""><img src="assets/images/youtube.png"/></a><!-- border="0" width="26" height="26" -->
+                    <a href=""><img src="assets/images/twitter.png"/></a>
+                    <a href=""><img src="assets/images/facebook.png"/></a>
+                    <a href=""><img src="assets/images/googleplus.png"/></a>
+                    <a href=""><img src="assets/images/rss.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="topo2">
+            <div class="topo2int">
+                <div class="logo"><img src="assets/images/logo.png"></div>
+                <div class="banner"></div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menuint">
+                <img class="menumobile" src="assets/images/menu.png"  alt="Menu" width="40" height="40" onclick="toggleMenu()"/>
+                <ul id="menu">
+                    <li><a href="./" class="ativo">Home</a></li>
+                    <li><a href="./">Economia</a></li>
+                    <li><a href="./">Entreterimento</a>
+                        <img src="assets/images/arrowdown.jpg" border="0" width="10"/>
+                        <div class="submenu">
+                            <a href="./"><div class="submenuitem"> sub-menu1</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu2</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu3</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu4</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu5</div></a>
+                        </div>
+                    </li>
+                    <li><a href="./">Esportes</a>
+                        <img src="assets/images/arrowdown.jpg" border="0" width="10"/>
+                        <div class="submenu">
+                            <a href="./"><div class="submenuitem"> sub-menu1</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu2</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu3</div></a>
+                        </div>
+                    </li>
+                    <li><a href="./">Geral</a></li>
+                    <li><a href="./">Noticias</a>
+                        <img src="assets/images/arrowdown.jpg" border="0" width="10"/>
+                        <div class="submenu">
+                            <a href="./"><div class="submenuitem"> sub-menu1</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu2</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu3</div></a>
+                            <a href="./"><div class="submenuitem"> sub-menu4</div></a>
+                        </div>
+                    </li>
+                    <li><a href="./">Policia</a></li>
+                    <li><a href="./">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ultimasnoticias">
+            <div class="ultimasnoticiasint">
+                <div class="ultimasnoticiasarea">
+                    <div class="ultnoticiastitulo">ULTIMAS NOTICIAS</div>
+                    <div class="ultnoticiasnoticia"> ESPAÇO PARA INSERIR TEXTO DE NOTICIAS</div>
+                </div>
+            </div>
+        </div>
+        <div class="container"> 
+            <div class="containerint"> 
+                <div class="leftside">
+                    <div class="slideshow" id="slideshow">
+                        <div class="slidebolinhas"> 
+                            <div class="bolinhas" onclick="mudarSlide(0)"></div>
+                            <div class="bolinhas" onclick="mudarSlide(1)"></div>
+                            <div class="bolinhas" onclick="mudarSlide(2)"></div>
+                            <div class="bolinhas" onclick="mudarSlide(3)"></div>
+                        </div>
+
+                        <div class="slideshowarea" id="slideshowarea">
+                            <a href="https://unsplash.it/0/0?image=13" title="Clique para ir para o site!">
+                                <div class="slide" style="background-image:url('https://unsplash.it/0/0?image=13')">
+                                    <div class="slideinfo"> <!--style="background-image:url('assets/images/slideshow_bg.png')"-->
+                                        <div class="slideinfo_titulo">titulo de teste1</div>
+                                        <div class="slideinfo_subtitulo">subtitulo de teste,subtitulo de teste</div>
+                                    </div>
+                                </div> 
+                            </a>
+                            <div class="slide" style="background-image:url('https://unsplash.it/0/0?image=16')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">titulo de teste2</div>
+                                    <div class="slideinfo_subtitulo">subtitulo de teste,subtitulo de teste</div>
+                                </div>
+                            </div>
+                            <div class="slide" style="background-image:url('https://unsplash.it/0/0?image=12')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">titulo de teste3</div>
+                                    <div class="slideinfo_subtitulo">subtitulo de teste,subtitulo de teste</div>
+                                </div>
+                            </div>
+                            <div class="slide" style="background-image:url('https://unsplash.it/0/0?image=164')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">titulo de teste4</div>
+                                    <div class="slideinfo_subtitulo">subtitulo de teste,subtitulo de teste</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="widget-titulo">noticias </div>
+                        <div class="widget-conteudo">
+                            <div class="noticiaarea1">
+                                <div class="noticia-item noticiabig">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=17" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">Reportagem de destaque desta edição serão aqui apresentadas</div>
+                                    <div class="noticiainfo"></br>500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                            </div>
+                            <div class="noticiaarea2">
+                                <a href="http://www.cruzeiro.com.br"/> <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=18" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">Cruzeiro o maior time de minas </div></br>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div></a>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=19" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=21" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=78" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget">
+                        <div class="widget-titulo">noticias </div>
+                        <div class="widget-conteudo">
+                            <div class="noticiaarea1">
+                                <div class="noticia-item noticiabig">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=98" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">Reportagem de destaque desta edição serão aqui apresentadas</div>
+                                    <div class="noticiainfo"></br>500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                            </div>
+                            <div class="noticiaarea2">
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=99" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">Cruzeiro o maior time de minas </div></br>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=67" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=68" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="noticia-item">
+                                    <div class="noticiaimg">
+                                        <img src="https://unsplash.it/0/0?image=69" border="0" width="80" height="80"/>
+                                    </div>
+                                    <div class="noticiastitulo">este e um titulo qualquer</div>
+                                    <div class="noticiainfo">500 comentarios </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightside">
+                    <div class="widget">
+                        <div class="widget-titulo">SOCIAL </div>
+                        <div class="widget-conteudo">
+                            <a href=""><img src="assets/images/youtube.png" border="0" width="26" height="26"/></a>
+                            <a href=""><img src="assets/images/twitter.png" border="0" width="26" height="26"/></a>
+                            <a href=""><img src="assets/images/facebook.png" border="0" width="26" height="26"/></a>
+                            <a href=""><img src="assets/images/googleplus.png" border="0" width="26" height="26"/></a>
+                            <a href=""><img src="assets/images/rss.png" border="0" width="26" height="26"/></a>
+
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="widget-titulo">ULTIMAS NOTICIAS </div>
+                        <div class="widget-conteudo">
+                            <div class="noticia-item">
+                                <a href="/."> aqui recebera textos com noticias referentes a noticias,
+                                    aqui recebera textos com noticias referentes a noticias.</a>
+                            </div>
+                            <div class="noticia-item">
+                                <a href="/."> aqui recebera textos com noticias referentes a noticias,
+                                    aqui recebera textos com noticias referentes a noticias.</a>
+                            </div>
+                            <div class="noticia-item">
+                                <a href="/."> aqui recebera textos com noticias referentes a noticias,
+                                    aqui recebera textos com noticias referentes a noticias.</a>
+                            </div>
+                            <div class="noticia-item">
+                                <a href="/."> aqui recebera textos com noticias referentes a noticias,
+                                    aqui recebera textos com noticias referentes a noticias.</a>
+                            </div>
+                            <div class="noticia-item">
+                                <a href="/."> aqui recebera textos com noticias referentes a noticias,
+                                    aqui recebera textos com noticias referentes a noticias.</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-titulo">PUBLICIDADE </div>
+                        <div class="widget-conteudo">
+                            <img src="assets/images/banner.jpg" border="0" width="275" />
+                        </div>
+                        <div class="widget">
+                            <div class="widget-titulo">ENCONTRE-NOS NO FACEBOOK </div>
+                            <div class="widget-conteudo">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs&width=275&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="260" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <script type="text/javascript" src="assets/js/script.js"></script> 
+    </body>
+</html>

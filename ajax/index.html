@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="BR" charset="UTF-8" />
+        <link href="style.css" rel="stylesheet" />		
+        <title>Título do Site</title>		
+    </head>	
+    <body>
+        <div class="hello" id="hello" > Hello Bar </div>
+        <button id='helloButton' style="margin: 5px"> Start HelloBar Animation </button>
+        <br/>
+
+        <!-- onsubmit="return false" no form impede o envio do formulario -->
+        <div class="divs" >
+            <form id="formID" method="GET" ><!--onsubmit="return false">-->
+                <input id="x" name="x" type="text" placeholder="Idade" /><br/>
+                <input id="y" name="y" type="text" placeholder="valor de y" /><br/>
+                <input id="cidade" name="cidade" type="text" placeholder="Cidade"
+                    onfocus="focoEmInput()"
+                    onkeypress="teclaPressionada(event)"
+                    onblur="desfocoDeInput()" /><br/><br/>
+                Estado:
+                <select id="estado" name="estado" onchange="mudouOpcao(this)">
+                    <option>RS </option>
+                    <option>SC </option>
+                    <option>PR </option>
+                </select>
+                <input type="submit" value="Submit" /><br/>                
+            </form>
+            <button id="btnOutra" >Get outra.html</button>
+        </div>
+        <br/><br/>      
+        <div id="div_resposta" class="divs" ></div>
+        <br/><br/>
+        <div class="div_user" >
+            <form id="formUser" method="GET" ><!--onsubmit="return false">-->
+                Nome:<br/>
+                <input type="text" name="nome" placeholder="Nome" /><br/>
+                Senha:<br/>
+                <input type="text" name="senha" placeholder="Senha" /><br/>
+                <input type="submit" value="Submit" /><br/>                
+            </form>            
+        </div>
+        <br/><br/>
+        <div id="div_respostaUser" class="div_user" ></div>
+    </body>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.js"
+            integrity="sha256-MyufSJPYmyLJzomPsAOszwxMNH2iQOeZXhMAKfh04P8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="testes.js"></script>
+</html>

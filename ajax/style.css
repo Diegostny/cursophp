@@ -1,0 +1,41 @@
+body{
+    background-color: #ccc;
+    padding: 5px;
+    margin: 5px;
+}
+.hello{
+    width:100%;
+    height:30px;		
+    background-color:black;	
+    text-align: center;
+    line-height: 30px;
+}
+.newhello{
+    background-color: #206060;
+    opacity: 0.7;
+    color: white;
+    width: 25%;
+    height: 60px;
+    line-height: 60px;
+}
+#novoItem{
+    border: 2px solid #000;
+}
+.divs{
+    width: 200px;
+    background-color:blue;
+    border: 3px solid #000;
+    padding: 5px;
+    display: inline-block;       
+}
+.div_user{
+    width: 200px;
+    background-color:red;
+    border: 3px solid #000;
+    padding: 5px;
+    display: inline-block;    
+}
+#div_resposta, #div_respostaUser{
+    display: inline-block; 
+    display: none;
+}
