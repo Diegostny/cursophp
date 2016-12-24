@@ -14,11 +14,11 @@ class Chat_controller extends Controller {
             $nome = filter_input(INPUT_POST, 'nome');
         }        
         $id = filter_input(INPUT_GET, 'id');        
-        if (isset($id)) { // entao o chat foi aberto pelo suporte        
+        if (isset($id)) { // entao o chat foi aberto pelo suporte
             $chamado->updateStatus($id, '1');
             $_SESSION['chatWindow'] = $id;
         } else { 
-            if (isset($nome) && !empty ($nome)) {                
+            if (isset($nome) && !empty ($nome)) {   
             $ip = filter_input(INPUT_SERVER, 'REMOTE_ADDR');
             $data_inicio = date('H:i:s');
             $idChamado = $chamado->addChamado($nome, $ip, $data_inicio);            
