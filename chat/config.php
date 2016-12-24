@@ -2,7 +2,7 @@
 
 require 'environment.php';
 
-define("BASE_URL", "http://projetophp.pc/chat/");
+define("BASE_URL", "http://cursophp.git/chat/");
 global $config;
 $config = array();
 
