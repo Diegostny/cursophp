@@ -4,3 +4,4 @@
     <input id="msg" type="text" onkeyup="enviarMsgChat(this, event)" 
            placeholder="<?php echo $nome; ?>, digite sua mensagem"/>
 </div>
+<script type="text/javascript"> updateChat(); </script>
