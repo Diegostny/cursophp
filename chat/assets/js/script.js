@@ -65,6 +65,7 @@ function getMsgTime(d) {
     if (str_s.length < 2)
         str_s = 0 + str_s;    
     // acrescenta um 0 se existir menos que 2 digitos
+    return (str_h+':'+str_m+':'+str_s);
 }
 
 function updateChat() {
@@ -94,23 +95,3 @@ function updateChat() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    return (str_h+':'+str_m+':'+str_s);
