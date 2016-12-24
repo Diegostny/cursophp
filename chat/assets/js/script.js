@@ -11,7 +11,7 @@ function getChamado() {
             resetChamados();
             if (json.chamados.length > 0) {
                 for (var i in json.chamados) {
-                    if (json.chamados[i].status == '1') {
+                    if (json.chamados[i].status === '1') {
                         $('#areadechamados').append("<tr class='chamado' data-id=" + json.chamados[i].id + "><td>" + json.chamados[i].data_inicio + "</td><td>" + json.chamados[i].nome + "</td><td> Em atendimento </td></tr>");
                     } else {
                         $('#areadechamados').append("<tr class='chamado' data-id=" + json.chamados[i].id + "><td>" + json.chamados[i].data_inicio + "</td><td>" + json.chamados[i].nome + "</td><td><button onclick='atenderChamado(this)'>Atender Chamado</button></td></tr>");
