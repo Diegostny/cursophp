@@ -58,14 +58,13 @@ function getMsgTime(d) {
     str_h = new String(d.getHours());
     str_m = new String(d.getMinutes());
     str_s = new String(d.getSeconds());
-    // acrescenta um 0 se existir menos que 2 digitos
     if (str_h.length < 2)
         str_h = 0 + str_h;
     if (str_m.length < 2)
         str_m = 0 + str_m;
     if (str_s.length < 2)
         str_s = 0 + str_s;    
-    return (str_h+':'+str_m+':'+str_s);
+    // acrescenta um 0 se existir menos que 2 digitos
 }
 
 function updateChat() {
@@ -114,3 +113,4 @@ function updateChat() {
 
 
     
+    return (str_h+':'+str_m+':'+str_s);
