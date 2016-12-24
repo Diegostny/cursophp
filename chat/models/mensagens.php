@@ -30,13 +30,5 @@ class Mensagens extends Model {
         $chamado->updateLastMsg($id, $_SESSION['area']);        
         return $msg;
     }
-
-    public function enviarMensagem($id, $origem, $msg, $time) {
-        if(!empty($id) && !empty($msg)) {
-            $sql = "INSERT INTO mensagens (id_chamado, origem, mensagem, data_enviado) "
-                    ."VALUES ('$id', '$origem', '$msg', $time)";
-            $this->db->query($sql);
-        }
-    }
     
 }
