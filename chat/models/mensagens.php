@@ -21,8 +21,7 @@ class Mensagens extends Model {
         if (!empty($id) && !empty($last)) {
             $sql = "SELECT * FROM mensagens WHERE id_chamado='$id' "
                     . " AND data_envio > '$last'";
-            $sql = $this->db->query($sql);
-            if ($sql->rowCount() > 0) {
+            if (($sql = $this->db->query($sql)) != FALSE) {
                 $msg = $sql->fetchAll();
             }
         }

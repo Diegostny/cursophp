@@ -37,8 +37,7 @@ class Chamados extends Model {
         if (!empty($idChamado) && !empty($area)) {
             // recupera somente a coluna 'time_lido_*' desse id
             $sql = "SELECT time_lido_".$area." as last FROM chamados WHERE id='$idChamado'";
-            $sql = $this->db->query($sql);             
-            if ($sql->rowCount() > 0) {
+            if (($sql = $this->db->query($sql)) != FALSE) {
                 $sql = $sql->fetch();                
                 $last = $sql['last'];
             }
@@ -48,7 +47,7 @@ class Chamados extends Model {
     
     public function updateLastMsg($id, $area) {
         if (!empty($id) && !empty($area)) {
-            $sql = "UPDATE chamados SET time_lido_".$area." = NOW() WHERE id='$id";
+            $sql = "UPDATE chamados SET time_lido_".$area."=NOW() WHERE id='$id'";
             $this->db->query($sql);
         }        
     }

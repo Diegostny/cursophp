@@ -77,14 +77,18 @@ function updateChat() {
            if (json.mensagens.length > 0) {
                for(var i in json.mensagens) {
                    var time = json.mensagens[i].data_envio;
+                   time = time.substring(11);
                    if (json.mensagens[i].origem === '0') {
                        var nome = 'Suporte';
                    } else {
-                       var nome = $('.inputarea').attr('data-nome');
+                       var nome = 'Cliente'; //$('.inputarea').attr('data-nome');
                    }                   
                    var msg = json.mensagens[i].mensagem;
-                   $('.chatarea').append("<div class='msgitem'>[" + time + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+                   if ((nome === 'Suporte' && json.area === 'cliente') || (nome !== 'Suporte' && json.area === 'suporte')) {
+                       $('.chatarea').append("<div class='msgitem'>[" + time + "] <strong>" + nome + "</strong>: " + msg + "</div>");
+                   }
                }
+               $('.chatarea').scrollTop($('.chatarea')[0].scrollHeight);
            }
            setTimeout(updateChat, 1000);
        },

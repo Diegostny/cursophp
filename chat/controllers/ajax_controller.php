@@ -38,6 +38,7 @@ class Ajax_controller extends Controller {
         
         $lastmsg = $chamado->getLastMsg($idChamado, $area);
         $dados['mensagens'] = $mensagem->getMensagem($idChamado, $lastmsg);
+        $dados['area'] = $area;
         echo json_encode($dados);
     }
     

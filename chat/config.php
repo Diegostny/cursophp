@@ -3,6 +3,7 @@
 require 'environment.php';
 
 define("BASE_URL", "http://cursophp.git/chat/");
+date_default_timezone_set('America/Sao_Paulo');
 global $config;
 $config = array();
 
